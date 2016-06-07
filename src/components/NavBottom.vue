@@ -220,34 +220,34 @@ export default {
       })
     },
     buy: function () {
-      window.location.href = '/wxshu/buy.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
-      if ((typeof window.WeixinJSBridge === 'undefined' || (typeof window.WeixinJSBridge.invoke === 'undefined'))) {
-        window.location.href = '/wxshu/buy.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
-      } else {
-        // 微信浏览器
-        window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9a0c51de15b24815' + '&redirect_uri=' + 'http%3a%2f%2fwww.whiletime.com%2fwxshu%2fbuy.html%3fbookId%3d' + this.bookId + '%26userId%3d' + this.userId + '&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
-      }
+      // window.location.href = '/wxshu/buy.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
+      // if ((typeof window.WeixinJSBridge === 'undefined' || (typeof window.WeixinJSBridge.invoke === 'undefined'))) {
+      //   window.location.href = '/wxshu/buy.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
+      // } else {
+      //   // 微信浏览器
+      //   window.location.href = 'https://open.weixin.qq.com/connect/oauth2/authorize?appid=wx9a0c51de15b24815' + '&redirect_uri=' + 'http%3a%2f%2fwww.whiletime.com%2fwxshu%2fbuy.html%3fbookId%3d' + this.bookId + '%26userId%3d' + this.userId + '&response_type=code&scope=snsapi_base&state=123#wechat_redirect'
+      // }
     },
     deleteByMonth: function () {
-      window.location.href = '/wxshu/deleteYearAndMonth.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
+      // window.location.href = '/wxshu/deleteYearAndMonth.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
     },
     recoverRecord: function () {
-      window.location.href = '/wxshu/transfer-dustbin.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
+      // window.location.href = '/wxshu/transfer-dustbin.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
     },
     addRecord: function () {
-      window.location.href = '/wxshu/add-record-xs.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
+      // window.location.href = '/wxshu/add-record-xs.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p
     },
     changeLayout: function () {
-      window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=style'
+      // window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=style'
     },
     changeCover: function () {
-      window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=cover'
+      // window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=cover'
     },
     changeMonthPage: function () {
-      window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=month'
+      // window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=month'
     },
     changeInnerPage: function () {
-      window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=innerpage'
+      // window.location.href = '/wxshu/wtChangeAll.html?bookId=' + this.bookId + '&userId=' + this.userId + '&p=' + this.p + '#show=innerpage'
     },
     dateBoardToggle: function () {
       this.dataBoardShow = !this.dataBoardShow
