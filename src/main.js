@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Book from './Book'
-import Order from './Order'
+import Flower from './flower'
 import filters from './filter'
 import VueRouter from 'vue-router'
 // http ajax
@@ -21,9 +21,9 @@ router.map({
     name: '我的时光书',
     component: Book
   },
-  '/order': {
-    name: '我的订单',
-    component: Order
+  '/flower': {
+    name: '村上隆太阳花',
+    component: Flower
   }
 })
 // 未匹配到就进行重定向
