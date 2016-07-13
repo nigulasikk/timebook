@@ -1,5 +1,48 @@
 <template>
-  h
+	<div class="petals">
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="petal-wrap">
+	        <div class="petal"></div>
+		</div>
+		<div class="flower-heart">
+			<div class="eye"></div>
+			<div class="eye"></div>
+			<div class="mouth"></div>
+		</div>
+	</div>
+
 </template>
 
 <script>
@@ -13,4 +56,134 @@ export default {
 body{
 	margin:0;
 }
+/*
+.petal {
+  position: absolute;
+  width: 2.88675em;
+  height: 2.5em;
+  background: linear-gradient(135deg, #e700fc 0%, #ff5bff 75%, #ffc1ff 100%);
+  border-radius: 0 50% 50% 50%;
+  box-shadow: -2px -2px 20px rgba(255, 255, 255, 0.5) inset, 0px 0px 2px rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+  cursor: pointer;
+  overflow: hidden;
+  transition: opacity 0.25s ease-in-out;
+  opacity: 1;
+  animation: ani1 2s ease-in-out infinite;
+  animation-delay: 0s;
+  transform: translateY(6.25em) translateX(11.05662em) rotate(-30deg) skewX(30deg) scale(1);
+}*/
+.flower-heart{
+	border:1px solid black;
+	width:160px;
+	height: 160px;
+	border-radius: 50%;
+	position: absolute;
+	left:300px;
+	top:300px;
+	transform:translate(-50%,-50%);
+	background: rgb(255,233,92);
+}
+.petal{
+	position:absolute;
+	width:100px;
+	height: 100px;
+	border:1px solid grey;
+	/*box-shadow: 2px 2px 2px white;*/
+
+	top:330px;
+	left:330px;
+
+	border-radius: 0 50% 50% 50%;
+
+	transform-origin: 0 0;
+	transform: skewX(30deg) scale(1);
+
+}
+.petal-wrap:first-child{
+	transform-origin: 300px 300px; 
+	transform: rotate(0deg);
+}
+.petal-wrap:nth-child(2){
+	transform-origin: 300px 300px; 
+	transform: rotate(30deg);
+}
+.petal-wrap:nth-child(3){
+	transform-origin: 300px 300px; 
+	transform: rotate(60deg);
+}
+.petal-wrap:nth-child(4){
+	transform-origin: 300px 300px; 
+	transform: rotate(90deg);
+}
+.petal-wrap:nth-child(5){
+	transform-origin: 300px 300px; 
+	transform: rotate(120deg);
+}
+.petal-wrap:nth-child(6){
+	transform-origin: 300px 300px; 
+	transform: rotate(150deg);
+}
+.petal-wrap:nth-child(7){
+	transform-origin: 300px 300px; 
+	transform: rotate(180deg);
+}
+.petal-wrap:nth-child(8){
+	transform-origin: 300px 300px; 
+	transform: rotate(210deg);
+}
+.petal-wrap:nth-child(9){
+	transform-origin: 300px 300px; 
+	transform: rotate(240deg);
+}
+.petal-wrap:nth-child(10){
+	transform-origin: 300px 300px; 
+	transform: rotate(270deg);
+}
+.petal-wrap:nth-child(11){
+	transform-origin: 300px 300px; 
+	transform: rotate(300deg);
+}
+.petal-wrap:nth-child(12){
+	transform-origin: 300px 300px; 
+	transform: rotate(330deg);
+}
+
+.petal-wrap:first-child .petal{
+	background: rgb(62,131,26);
+}
+.petal-wrap:nth-child(2) .petal{
+	background: rgb(54,141,46);
+}
+.petal-wrap:nth-child(3) .petal{
+	background: rgb(24,157,78);
+}
+.petal-wrap:nth-child(4) .petal{
+	background: rgb(66,218,247);
+}
+.petal-wrap:nth-child(5) .petal{
+	background: rgb(49,119,206);
+}
+.petal-wrap:nth-child(6) .petal{
+	background: rgb(23,26,31);
+}
+.petal-wrap:nth-child(7) .petal{
+	background: rgb(61,39,79);
+}
+.petal-wrap:nth-child(8) .petal{
+	background: rgb(224,65,109);
+}
+.petal-wrap:nth-child(9) .petal{
+	background: rgb(246,89,62);
+}
+.petal-wrap:nth-child(10) .petal{
+	background: rgb(235,187,59);
+}
+.petal-wrap:nth-child(11) .petal{
+	background: rgb(218,161,25);
+}
+.petal-wrap:nth-child(12) .petal{
+	background: rgb(178,140,70);
+}
+
 </style>
