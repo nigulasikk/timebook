@@ -37,8 +37,8 @@
 	        <div class="petal"></div>
 		</div>
 		<div class="flower-heart">
-			<div class="eye"></div>
-			<div class="eye"></div>
+			<div class="eye left-eye"></div>
+			<div class="eye right-eye"></div>
 			<div class="mouth"></div>
 		</div>
 	</div>
@@ -73,6 +73,7 @@ body{
   animation-delay: 0s;
   transform: translateY(6.25em) translateX(11.05662em) rotate(-30deg) skewX(30deg) scale(1);
 }*/
+/*花心*/
 .flower-heart{
 	border:1px solid black;
 	width:160px;
@@ -84,6 +85,57 @@ body{
 	transform:translate(-50%,-50%);
 	background: rgb(255,233,92);
 }
+/*眼睛嘴巴*/
+.eye{
+	width:20px;
+	height: 20px;
+	border:1px solid grey;
+	border-radius: 50%;
+	position: absolute;
+	background: black;
+}
+.eye:before{
+	content: '';
+	position: absolute;
+	top:3px;
+	left:3px;
+	width: 4px;
+	height: 6px;
+	background: white;
+	border-radius: 50%;
+	transform: rotate(-40deg);
+}
+.eye:after{
+	content: '';
+	position: absolute;
+	bottom:3px;
+	right:3px;
+	width: 4px;
+	height: 4px;
+	background: white;
+	border-radius: 50%;
+}
+
+.left-eye{
+	left:24%;
+	top:30%;
+}
+.right-eye{
+	right: 24%;
+	top:30%;
+}
+.mouth{
+	width:90px;
+	height: 50px;
+	border:1px solid grey;
+	border-radius: 0 0 50px 50px;
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+	top:56%;
+	background: rgb(210,59,70);
+}
+/*花瓣*/
 .petal{
 	position:absolute;
 	width:100px;
@@ -100,6 +152,7 @@ body{
 	transform: skewX(30deg) scale(1);
 
 }
+/*花瓣旋转*/
 .petal-wrap:first-child{
 	transform-origin: 300px 300px; 
 	transform: rotate(0deg);
@@ -148,7 +201,7 @@ body{
 	transform-origin: 300px 300px; 
 	transform: rotate(330deg);
 }
-
+/*颜色*/
 .petal-wrap:first-child .petal{
 	background: rgb(62,131,26);
 }
@@ -185,5 +238,6 @@ body{
 .petal-wrap:nth-child(12) .petal{
 	background: rgb(178,140,70);
 }
+
 
 </style>
