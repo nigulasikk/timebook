@@ -1,5 +1,5 @@
 <template>
-	<div class="petals">
+	<div class="kaikaikiki-flower">
 		<div class="petal-wrap">
 	        <div class="petal"></div>
 		</div>
@@ -42,7 +42,17 @@
 			<div class="mouth"></div>
 		</div>
 	</div>
-
+	动画过程： 素描圆--》花瓣成型--》整体成型--》上色--》 形状优化
+	<div class="animation-kaikaikiki">
+		<div class="a-petal-wrap">
+	        <div class="a-petal"></div>
+		</div>
+		<div class="a-flower-heart">
+			<div class="a-eye a-left-eye"></div>
+			<div class="a-eye a-right-eye"></div>
+			<div class="a-mouth"></div>
+		</div>
+	</div>
 </template>
 
 <script>
@@ -56,6 +66,12 @@ export default {
 body{
 	margin:0;
 }
+.animation-kaikaikiki{
+	display: block;
+	position: absolute;
+	left:500px;
+}
+
 /*
 .petal {
   position: absolute;
@@ -73,34 +89,60 @@ body{
   animation-delay: 0s;
   transform: translateY(6.25em) translateX(11.05662em) rotate(-30deg) skewX(30deg) scale(1);
 }*/
+.kaikaikiki-flower{
+	font-size: 100px;
+}
+/*花瓣*/
+.petal{
+	position:absolute;
+	width:.66em;
+	height: .66em;
+	border:2px solid #232;
+	/*box-shadow: 2px 2px 2px white;*/
+
+	top:1.53em;
+	left:1.53em;
+
+	border-radius: 0 50% 50% 50%;
+
+	transform-origin: 0 0;
+	transform: skewX(30deg);
+
+}
+.petal-wrap{
+	/*旋转的圆心*/
+	transform-origin: 1.33em 1.33em;
+}
 /*花心*/
 .flower-heart{
 	border:2px solid #232;
-	width:160px;
-	height: 160px;
+	width:1.1em;
+	height: 1.1em;
 	border-radius: 50%;
 	position: absolute;
-	left:300px;
-	top:300px;
+	left:1.33em;
+	top:1.33em;
 	transform:translate(-50%,-50%);
 	background: rgb(255,233,92);
 }
 /*眼睛嘴巴*/
 .eye{
-	width:20px;
-	height: 24px;
-	border:1px solid grey;
+	width:.13em;
+	height: .16em;
+	border:1px solid black;
 	border-radius: 50%;
 	position: absolute;
 	background: black;
+	/*眼影*/
+	box-shadow: 1px 2px 3px rgba(0,0,0,.5);
 }
 .eye:before{
 	content: '';
 	position: absolute;
-	top:3px;
-	left:3px;
-	width: 6px;
-	height: 8px;
+	top:.02em;
+	left:.02em;
+	width: .04em;
+	height: .053em;
 	background: white;
 	border-radius: 50%;
 	transform: rotate(-40deg);
@@ -108,10 +150,10 @@ body{
 .eye:after{
 	content: '';
 	position: absolute;
-	bottom:3px;
-	right:3px;
-	width: 5px;
-	height: 5px;
+	bottom:.02em;
+	right:.02em;
+	width: .04em;
+	height: .04em;
 	background: white;
 	border-radius: 50%;
 }
@@ -125,12 +167,12 @@ body{
 	top:26%;
 }
 .mouth{
-	width:90px;
-	height: 50px;
+	width:.6em;
+	height: .33em;
 	border-left:2px solid #232;
 	border-right:2px solid #232;
 	border-bottom:2px solid #232;
-	border-radius: 0 0 50px 50px;
+	border-radius: 0 0 .33em .33em;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
@@ -139,82 +181,54 @@ body{
 }
 /*上嘴唇*/
 .mouth:before{
-	width:90px;
-	height: 9px;
+	width:.6em;
+	height: .06em;
 	background: inherit;
 	content: '';
 	position: absolute;
-	top:-9px;
+	top:-.05em;
 	left:-2px;
 	border-right: 2px solid #232;
 	  border-left: 2px solid #232;
 	  border-top: 2px solid #232;
-	  border-radius: 90px 90px 0 0/20px 20px 0 0;
+	  border-radius: .6em .6em 0 0/.06em .06em 0 0;
 }
-/*花瓣*/
-.petal{
-	position:absolute;
-	width:100px;
-	height: 100px;
-	border:2px solid #232;
-	/*box-shadow: 2px 2px 2px white;*/
 
-	top:330px;
-	left:330px;
-
-	border-radius: 0 50% 50% 50%;
-
-	transform-origin: 0 0;
-	transform: skewX(30deg) scale(1);
-
-}
 /*花瓣旋转*/
 .petal-wrap:first-child{
-	transform-origin: 300px 300px; 
 	transform: rotate(0deg);
 }
 .petal-wrap:nth-child(2){
-	transform-origin: 300px 300px; 
 	transform: rotate(30deg);
 }
 .petal-wrap:nth-child(3){
-	transform-origin: 300px 300px; 
 	transform: rotate(60deg);
 }
 .petal-wrap:nth-child(4){
-	transform-origin: 300px 300px; 
 	transform: rotate(90deg);
 }
 .petal-wrap:nth-child(5){
-	transform-origin: 300px 300px; 
 	transform: rotate(120deg);
 }
 .petal-wrap:nth-child(6){
-	transform-origin: 300px 300px; 
 	transform: rotate(150deg);
 }
 .petal-wrap:nth-child(7){
-	transform-origin: 300px 300px; 
 	transform: rotate(180deg);
 }
 .petal-wrap:nth-child(8){
-	transform-origin: 300px 300px; 
 	transform: rotate(210deg);
 }
 .petal-wrap:nth-child(9){
-	transform-origin: 300px 300px; 
 	transform: rotate(240deg);
 }
 .petal-wrap:nth-child(10){
-	transform-origin: 300px 300px; 
 	transform: rotate(270deg);
 }
 .petal-wrap:nth-child(11){
-	transform-origin: 300px 300px; 
 	transform: rotate(300deg);
 }
 .petal-wrap:nth-child(12){
-	transform-origin: 300px 300px; 
 	transform: rotate(330deg);
 }
 /*颜色*/
