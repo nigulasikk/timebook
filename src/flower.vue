@@ -75,7 +75,7 @@ body{
 }*/
 /*花心*/
 .flower-heart{
-	border:1px solid black;
+	border:2px solid #232;
 	width:160px;
 	height: 160px;
 	border-radius: 50%;
@@ -88,7 +88,7 @@ body{
 /*眼睛嘴巴*/
 .eye{
 	width:20px;
-	height: 20px;
+	height: 24px;
 	border:1px solid grey;
 	border-radius: 50%;
 	position: absolute;
@@ -99,8 +99,8 @@ body{
 	position: absolute;
 	top:3px;
 	left:3px;
-	width: 4px;
-	height: 6px;
+	width: 6px;
+	height: 8px;
 	background: white;
 	border-radius: 50%;
 	transform: rotate(-40deg);
@@ -110,37 +110,53 @@ body{
 	position: absolute;
 	bottom:3px;
 	right:3px;
-	width: 4px;
-	height: 4px;
+	width: 5px;
+	height: 5px;
 	background: white;
 	border-radius: 50%;
 }
 
 .left-eye{
 	left:24%;
-	top:30%;
+	top:26%;
 }
 .right-eye{
 	right: 24%;
-	top:30%;
+	top:26%;
 }
 .mouth{
 	width:90px;
 	height: 50px;
-	border:1px solid grey;
+	border-left:2px solid #232;
+	border-right:2px solid #232;
+	border-bottom:2px solid #232;
 	border-radius: 0 0 50px 50px;
 	position: absolute;
 	left: 50%;
 	transform: translateX(-50%);
 	top:56%;
-	background: rgb(210,59,70);
+	background: #ea1b2c;
+}
+/*上嘴唇*/
+.mouth:before{
+	width:90px;
+	height: 9px;
+	background: inherit;
+	content: '';
+	position: absolute;
+	top:-9px;
+	left:-2px;
+	border-right: 2px solid #232;
+	  border-left: 2px solid #232;
+	  border-top: 2px solid #232;
+	  border-radius: 90px 90px 0 0/20px 20px 0 0;
 }
 /*花瓣*/
 .petal{
 	position:absolute;
 	width:100px;
 	height: 100px;
-	border:1px solid grey;
+	border:2px solid #232;
 	/*box-shadow: 2px 2px 2px white;*/
 
 	top:330px;
