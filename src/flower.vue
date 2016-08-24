@@ -42,7 +42,7 @@
 			<div class="mouth"></div>
 		</div>
 	</div>
-	动画过程： 素描圆--》花瓣成型--》整体成型--》上色--》 形状优化
+	动画过程： 素描圆--》花瓣成型--》整体成型--》上色--》 形状优化 
 	<div class="animation-kaikaikiki">
 		<div class="a-petal-wrap">
 	        <div class="a-petal"></div>
@@ -66,11 +66,6 @@ export default {
 body{
 	margin:0;
 }
-.animation-kaikaikiki{
-	display: block;
-	position: absolute;
-	left:500px;
-}
 
 /*
 .petal {
@@ -91,6 +86,7 @@ body{
 }*/
 .kaikaikiki-flower{
 	font-size: 100px;
+	position: relative;
 }
 /*花瓣*/
 .petal{
@@ -267,6 +263,14 @@ body{
 }
 .petal-wrap:nth-child(12) .petal{
 	background: rgb(178,140,70);
+}
+
+
+/*动画教程*/
+.animation-kaikaikiki{
+	display: block;
+	position: absolute;
+	left:500px;
 }
 
 
