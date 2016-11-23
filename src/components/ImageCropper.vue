@@ -78,34 +78,6 @@ export default {
       $('#h5-cropbox').cropper('clear').cropper('reset').cropper('replace', imageUrl).cropper('setAspectRatio', $('#h5-aspectRatio').val())
     },
     cropInit: function () {
-      var self = this
-      $('#h5-cropbox').cropper({
-        viewMode: 1,
-        dragMode: 'move',
-        autoCropArea: 1,
-        restore: false,
-        guides: false,
-        highlight: false,
-        cropBoxMovable: false,
-        cropBoxResizable: false,
-        checkCrossOrigin: false,
-        toggleDragModeOnDblclick: false,
-        responsive: false,
-        crop: function (c) {
-          $('#h5-x').val(c.x)
-          $('#h5-y').val(c.y)
-          $('#h5-w').val(c.width)
-          $('#h5-h').val(c.height)
-          $('#h5-r').val(c.rotate)
-        },
-        built: function () {
-          self.cropLoadding = false
-          // closeLoadding();
-          // 初始化裁剪宽高比
-          //                console.log('built');
-          self.showModal = true
-        }
-      })
     },
     uploadByH5: function (file) {
       var self = this
