@@ -116,7 +116,7 @@ export default {
       // 离开网页的请求
       window.onbeforeunload = function () {
         console.log('leave' + m)
-        vuem.$http.get('/static/json/wxpages.json', {id: vuem.bookId, month: m, year: y}, {emulateJSON: true}).then(function (response) {})
+        vuem.$http.get('./static/json/wxpages.json', {id: vuem.bookId, month: m, year: y}, {emulateJSON: true}).then(function (response) {})
       }
       //            最后一个月判断
       if ((y * 12 + m) === (this.lastY * 12 + this.lastM)) {
@@ -167,7 +167,7 @@ export default {
       this.ifloadding = true
 //      第一次进入页面  this.selectedY ,this.selectedM 都为空,不会触发第一个月
       if (this.selectedM === '' && this.selectedY === '') {
-        this.$http.get('/static/json/wxpages.json', {id: this.bookId, month: distm, year: disty}, {emulateJSON: true}).then(function (response) {
+        this.$http.get('./static/json/wxpages.json', {id: this.bookId, month: distm, year: disty}, {emulateJSON: true}).then(function (response) {
           this.selectedY = disty
           this.selectedM = distm
         })
@@ -175,7 +175,7 @@ export default {
 //        根据this.ifmodified 字段(用户是否已经进行信息修改)来决定是否重排
         if (this.ifmodified) {
            //        重排当月,然后再赋值下个月信息,(请求下个月数据)
-          this.$http.get('/static/json/wxpages.json', {id: this.bookId, month: this.selectedM, year: this.selectedY}, {emulateJSON: true}).then(function (response) {
+          this.$http.get('./static/json/wxpages.json', {id: this.bookId, month: this.selectedM, year: this.selectedY}, {emulateJSON: true}).then(function (response) {
             this.selectedY = disty
             this.selectedM = distm
           })
@@ -188,7 +188,7 @@ export default {
       this.ifmodified = false
     },
     initYear: function () {
-      this.$http({url: '/static/json/yearandmonths.json', method: 'GET', emulateJSON: true}).then(function (response) {
+      this.$http({url: './static/json/yearandmonths.json', method: 'GET', emulateJSON: true}).then(function (response) {
         for (var i = 0; i < 3018; i++) {
           // 不用push，因为push会引发页面渲染（影响性能），直接修改元素则不会
           this.selectedData[i] = []

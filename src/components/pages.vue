@@ -369,7 +369,7 @@ export default {
     // 根据年月拿数据
     getPages: function (y, m) {
       this.ifLoadding = true
-      this.$http({url: '/static/json/page' + y + '-' + m + '.json', method: 'GET', emulateJSON: true}).then(function (response) {
+      this.$http({url: './static/json/page' + y + '-' + m + '.json', method: 'GET', emulateJSON: true}).then(function (response) {
         this.book = response.data.book
         // 屏幕缩放
         var screenWidth = document.querySelector('body').offsetWidth - 10

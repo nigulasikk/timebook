@@ -6,7 +6,7 @@ module.exports = {
     index: path.resolve(__dirname, 'vuedist/book.html'),
     assetsRoot: path.resolve(__dirname, 'vuedist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
     // assetsPublicPath: '/v4tb/vuedist/',
     productionSourceMap: true
   },
